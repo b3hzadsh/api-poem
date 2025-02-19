@@ -1,0 +1,129 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Run Django Server",
+            "type": "shell",
+            "command": "python",
+            "args": [
+                "manage.py",
+                "runserver"
+            ],
+            "problemMatcher": [],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "presentation": {
+                "reveal": "always",
+                "panel": "new"
+            },
+            "options": {
+                "cwd": "${workspaceFolder}"
+            }
+        },
+        {
+            "label": "Run Django Tests",
+            "type": "shell",
+            "command": "python",
+            "args": [
+                "manage.py",
+                "test"
+            ],
+            "problemMatcher": [],
+            "group": "test",
+            "presentation": {
+                "reveal": "always",
+                "panel": "new"
+            },
+            "options": {
+                "cwd": "${workspaceFolder}"
+            }
+        },
+        {
+            "label": "Make Django Migrations",
+            "type": "shell",
+            "command": "python",
+            "args": [
+                "manage.py",
+                "makemigrations"
+            ],
+            "problemMatcher": [],
+            "presentation": {
+                "reveal": "always",
+                "panel": "new"
+            },
+            "options": {
+                "cwd": "${workspaceFolder}"
+            }
+        },
+        {
+            "label": "Apply Django Migrations",
+            "type": "shell",
+            "command": "python",
+            "args": [
+                "manage.py",
+                "migrate"
+            ],
+            "problemMatcher": [],
+            "presentation": {
+                "reveal": "always",
+                "panel": "new"
+            },
+            "options": {
+                "cwd": "${workspaceFolder}"
+            }
+        },
+        {
+            "label": "Create Django Superuser",
+            "type": "shell",
+            "command": "python",
+            "args": [
+                "manage.py",
+                "createsuperuser"
+            ],
+            "problemMatcher": [],
+            "presentation": {
+                "reveal": "always",
+                "panel": "new"
+            },
+            "options": {
+                "cwd": "${workspaceFolder}"
+            }
+        },
+        {
+            "label": "Collect Static Files",
+            "type": "shell",
+            "command": "python",
+            "args": [
+                "manage.py",
+                "collectstatic"
+            ],
+            "problemMatcher": [],
+            "presentation": {
+                "reveal": "always",
+                "panel": "new"
+            },
+            "options": {
+                "cwd": "${workspaceFolder}"
+            }
+        },
+        {
+            "label": "Run Django Shell",
+            "type": "shell",
+            "command": "python",
+            "args": [
+                "manage.py",
+                "shell"
+            ],
+            "problemMatcher": [],
+            "presentation": {
+                "reveal": "always",
+                "panel": "new"
+            },
+            "options": {
+                "cwd": "${workspaceFolder}"
+            }
+        }
+    ]
+}

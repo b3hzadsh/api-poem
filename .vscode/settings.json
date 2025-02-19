@@ -1,0 +1,46 @@
+{
+	"editor.tabSize": 4,
+	"editor.insertSpaces": true,
+	"editor.fontSize": 16,
+	"editor.fontFamily": "Operator Mono, JetBrains Mono, Consolas, monospace",
+	"files.autoSave": "afterDelay",
+	"ruff.nativeServer": "on",
+	"[python]": {
+		"editor.tabSize": 4,
+		"editor.insertSpaces": true,
+		"editor.formatOnSaveMode": "file",
+		"editor.defaultFormatter": "charliermarsh.ruff",
+		"editor.formatOnType": false,
+		"editor.formatOnSave": true,
+		"editor.codeActionsOnSave": {
+			"source.organizeImports": "explicit",
+			"source.fixAll": "explicit"
+		},
+	},
+	"python.defaultInterpreterPath": "E:/dev/sdk/miniconda/envs/djtest/python.exe",
+	"ruff.interpreter": [
+		"E:\\dev\\sdk\\miniconda\\envs\\djtest\\python.exe"
+	],
+	"emmet.includeLanguages": {
+		"django-html": "html",
+		"jinja-html": "html"
+	},
+	"VsCodeTaskButtons.showCounter": true,
+	"VsCodeTaskButtons.tasks": [
+		{
+			"label": "Make-migrations",
+			"task": "Make Django Migrations",
+			"tooltip": "🛠️ Start the \"build\" task"
+		},
+		{
+			"label": "Migrate",
+			"task": "Apply Django Migrations",
+			"tooltip": "🛠️ Start the \"build\" task"
+		},
+	],
+	"python.languageServer": "Pylance",
+	"errorLens.excludePatterns": [
+		"templates/*/*.html"
+	],
+	"python.analysis.typeCheckingMode": "standard"
+}
