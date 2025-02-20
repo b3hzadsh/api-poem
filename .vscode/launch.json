@@ -1,0 +1,17 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "FastAPI: Run Development Server",
+            "type": "debugpy",
+            "request": "launch",
+            "module": "uvicorn",
+            "args": [
+                "main:app", // Replace with your FastAPI app module and app instance
+                "--reload" // Enable auto-reload for development
+            ],
+            "jinja": true,
+            "justMyCode": true
+        }
+    ]
+}
