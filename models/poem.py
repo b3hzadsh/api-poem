@@ -1,24 +1,45 @@
+from turtle import position
+
 from pydantic import BaseModel, ConfigDict
+from sqlalchemy import Column, Integer, String, create_engine
+from sqlalchemy.ext.declarative import declarative_base
+
+Base = declarative_base()
 
 
-class Verse(BaseModel):
-    text: str
-    position: int
+class Verse(Base):
+    __tablename__ = "verse"
+
+    poem_id = Column(Integer)
+    vorder = Column(Integer)
+    position = Column(Integer)
+    text = Column(String, primary_key=True, index=True)
+
+
+class VerseResponse(BaseModel):
     vorder: int
+    text: str
+
+    class Config:
+        orm_mode = True  # Allows conversion from ORM object to Pydantic model
+        from_attributes = True
 
 
-class VerseIn(Verse):
-    poem_id: int
+# SQLAlchemy Model
+class Poem(Base):
+    __tablename__ = "poem"
 
-    model_config = ConfigDict(from_attributes=True)
+    id = Column(Integer, primary_key=True, index=True)
+    cat_id = Column(Integer)
+    title = Column(String)
 
 
-class Poem(BaseModel):
-    title: str
-
-
-class PoemIn(Poem):
+# Pydantic Model
+class PoemResponse(BaseModel):
     id: int
     cat_id: int
+    title: str
 
-    model_config = ConfigDict(from_attributes=True)
+    class Config:
+        orm_mode = True  # Allows conversion from ORM object to Pydantic model
+        from_attributes = True
